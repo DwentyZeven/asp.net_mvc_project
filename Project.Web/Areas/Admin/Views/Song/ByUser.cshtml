@@ -1,0 +1,10 @@
+﻿@model Project.Web.Extensions.Pagination.IPagedList<Project.Models.Song>
+
+@{
+    ViewBag.Title = "Цитаты пользователя " + (ViewBag.User as Project.Models.User).Firstname + " "
+                                           + (ViewBag.User as Project.Models.User).Lastname;
+}
+
+<h2>@ViewBag.Title</h2>
+
+@Html.Partial("_SongList", Model)

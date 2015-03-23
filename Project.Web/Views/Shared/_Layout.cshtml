@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>@Project.Web.Config.ProjectName | @ViewBag.Title</title>
+    <link href="/favicon.png" rel="icon" type="image/png" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SiteIE9.css")" />
+    <![endif]-->
+    <!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SiteIE.css")" />
+    <![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/SiteIE6.css")" />
+    <![endif]-->
+    <meta property="og:title" content="@Project.Web.Properties.Resources.FromSongProject" />
+    <meta property="og:description" content="@Project.Web.Properties.Resources.FromSongProject" />
+    <meta property="og:site_name" content="Fromsong">
+    <meta property="og:image" content="http://fromsong.ru/Content/images/fromsong_icon.jpg" />
+</head>
+<body>
+    <div id="up-arrow">
+        <a href="" onclick="scrollToTop(); return false;">
+            <![if !IE]>
+                <img src="@Url.Content("~/Content/images/up_arrow.png")" alt="@Project.Web.Properties.Resources.LayoutUp" />
+            <![endif]>
+            <!--[if gte IE 9]>
+                <img src="@Url.Content("~/Content/images/up_arrow.png")" alt="@Project.Web.Properties.Resources.LayoutUp" />
+            <![endif]-->
+            <!--[if lte IE 8]>
+                <img src="@Url.Content("~/Content/images/up_arrow.gif")" alt="@Project.Web.Properties.Resources.LayoutUp" />
+            <![endif]-->
+        </a>
+    </div>
+    <div id="culture">
+        @Project.Web.Properties.Resources.LayoutLanguage:&nbsp;
+        @Html.RouteLink("Русский", "CultureSetRussian") | 
+        @Html.RouteLink("English", "CultureSetEnglish")
+        @*&nbsp; @DateTime.Now*@
+    </div>
+    <div id="header"> 
+        <div id="fromsong" style="height: 300px"></div> 
+    </div>
+	<div id="menu-wrapper">
+		<div id="menu">
+            <div onclick="window.location.href='/'" @if (ViewContext.RouteData.Values["action"] == "List" && ViewContext.RouteData.Values["controller"] == "Ticket")
+                                                          { <text>class="selected"</text> } >
+                <h2>@Project.Web.Properties.Resources.LayoutTickets</h2>
+                <p>@Project.Web.Properties.Resources.LayoutByAllUsers</p>
+            </div>
+            <div onclick="window.location.href='/add_ticket'" @if (ViewContext.RouteData.Values["action"] == "Add" && ViewContext.RouteData.Values["controller"] == "Ticket")
+                                                             { <text>class="selected"</text> } >
+                <h2>@Project.Web.Properties.Resources.LayoutAddTicket</h2>
+                <p>@Project.Web.Properties.Resources.LayoutItsVeryEasy</p>
+            </div>
+		</div>
+	</div>
+    <div id="wrapper">
+	    <div id="container">
+            <div id="message">
+                @TempData["message"]
+            </div>
+		    <div id="content">
+                @RenderBody()
+		    </div>
+		    <div id="sidebar">
+                @Html.Partial("_SignIn")
+                @*@Html.Partial("_CommunityWidgetVK")*@
+                @*@Html.Partial("_CommunityWidgetFB")*@
+		    </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div id="footer-border-wrapper">
+        <div id="footer-border">
+        </div>
+    </div>
+    <div id="footer">
+        <div id="footer-text">
+            <p>@Project.Web.Properties.Resources.FromSongProject</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿@model Project.Web.Extensions.Pagination.IPagedList<Project.Models.Song>
+@using Project.Web.Extensions.Pagination
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Исполнитель</th>
+        <th>Название</th>
+        <th>Цитата</th>
+        <th>Перевод</th>
+        <th>Язык</th>
+        <th>Время добавления</th>
+        @if (ViewContext.RouteData.Values["action"] as string != "Index" && ViewContext.RouteData.Values["action"] as string != "ByDeletedUsers")
+        {
+            <th>Пользователь</th> 
+        }
+        @if (ViewContext.RouteData.Values["action"] as string == "List")
+        {
+            <th></th>
+        }
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var song in Model)
+    {
+        <tr id="@string.Format("song{0}", song.SongId)">
+            <td>
+                @song.SongId
+            </td>
+            <td style="width: 200px;">
+                @song.Singer
+            </td>
+            <td style="width: 200px;">
+                @song.Title
+            </td>
+            <td style="text-align: left;">
+                @song.Quote.Substring(0, 30)...
+            </td>
+            @if (@song.Translation != null) 
+            {                    
+                <td style="text-align: left;">
+                    @song.Translation.Substring(0, 30)
+                    ...
+                </td>
+            }
+            else 
+            {
+                <td>&mdash;</td>
+            }
+            <td>
+                @(song.Language == 1 ? "рус" : "англ")
+            </td>
+            <td>
+                @TimeZone.CurrentTimeZone.ToLocalTime(song.CreatedOn)
+            </td>
+            @if (ViewContext.RouteData.Values["action"] as string != "Index" && ViewContext.RouteData.Values["action"] as string != "ByDeletedUsers")
+            {
+                if (song.User != null)
+                {
+                    <td>
+                        <!––noindex––>
+                            <a href="@song.User.Link" target="_blank" style="text-decoration: none" rel="nofollow">@song.User.Firstname @song.User.Lastname</a>
+                        <!––/noindex––>
+                    </td>
+                }
+                else
+                {
+                    <td>удалён</td>
+                }
+            }
+            @if (ViewContext.RouteData.Values["action"] as string == "List")
+            {
+                if (song.User == null)
+                {
+                    <td></td>
+                }
+                else
+                {
+                    <td>
+                        @Html.RouteLink("Цитаты", "AdminSongByUser", new { userId = @song.User.UserId })
+                    </td>
+                }
+            }
+            <td>
+                @Html.RouteLink("Редактировать", "AdminSongEdit", new { songId = @song.SongId })
+            </td>
+            <td>
+                <a href="" onclick="deleteSong(@song.SongId); return false;">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="pagination">
+    @Html.Pagination(Model.CurrentPageNumber, Model.PageSize, Model.TotalCount)
+</div>
+
+<script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/fs.song-list-delete.js")" type="text/javascript"></script>

@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = Project.Web.Properties.Resources.SignInTitle;
+}
+
+<div id="login-page" class="base">
+    <h2>@ViewBag.Title</h2>
+    <div class="logos">
+        <div class="logo">
+            <a href="@Url.RouteUrl("VkontakteIndex")">
+                <img src="@Url.Content("~/Content/images/vk_logo.jpg")" alt="@Project.Web.Properties.Resources.SignInVkontakte" />
+            </a>
+            <span class="name">@Project.Web.Properties.Resources.SignInVkontakte</span>
+        </div>
+        <div class="separator">@Project.Web.Properties.Resources.SignInOr</div>
+        <div class="logo">
+            <a href="@Url.RouteUrl("FacebookIndex")">
+                <img src="@Url.Content("~/Content/images/fb_logo.jpg")" alt="Facebook" />
+            </a>
+            <span class="name">Facebook</span>
+        </div>
+    </div>
+</div>

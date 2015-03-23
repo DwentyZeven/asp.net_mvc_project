@@ -1,0 +1,19 @@
+﻿@model Project.Models.Song
+
+@{
+    ViewBag.Title = "Редактировать цитату";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+
+    @Html.HiddenFor(model => model.SongId)
+    @Html.Hidden("Referrer", ViewData["Referrer"] as string)
+    @Html.Partial("_SongForm", Model)
+
+}
+
+<div>
+    <a href="@(ViewData["Referrer"] as string)">Назад</a>
+</div>

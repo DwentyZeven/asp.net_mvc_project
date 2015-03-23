@@ -1,0 +1,10 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = Project.Web.Properties.Resources.ErrorTitle;
+}
+
+<div id="error" class="base">
+    <h2>@ViewBag.Title</h2>
+    <div class="description">@ViewData["Description"]</div>
+</div>

@@ -1,0 +1,9 @@
+﻿@model Project.Web.Extensions.Pagination.IPagedList<Project.Models.User>
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@Html.Partial("_UserList", Model)

@@ -1,0 +1,20 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <text>
+        Добро пожаловать, 
+        <strong>
+            @((User.Identity as Project.Web.Models.ProjectIdentity).Firstname)
+            @((User.Identity as Project.Web.Models.ProjectIdentity).Lastname)
+        </strong>
+        [ @Html.RouteLink("Выйти", "AuthSignOut") ]
+    </text>
+    if ((User.Identity as Project.Web.Models.ProjectIdentity).Role == 1)
+    {
+        <text>[ @Html.RouteLink("Пользовательская часть", "SongIndex") ]</text>
+    }
+}
+else
+{
+    @:[ @Html.RouteLink("Войти через ВКонтакте", "VkontakteIndex") ]
+    @:[ @Html.RouteLink("Войти через Facebook", "FacebookIndex") ]
+}

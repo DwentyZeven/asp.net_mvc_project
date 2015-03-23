@@ -1,0 +1,15 @@
+﻿@model Project.Models.Ticket
+
+@{
+    ViewBag.Title = Project.Web.Properties.Resources.SongAddTitle;
+}
+
+<div class="form base">
+
+@using (Html.BeginForm()) {
+    
+    @Html.Partial("_TicketForm", Model)
+
+}
+
+</div>

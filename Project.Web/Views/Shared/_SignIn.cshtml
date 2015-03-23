@@ -1,0 +1,50 @@
+﻿<div id="login-block" class="base-sidebar">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="title">
+            <strong>
+                @((User.Identity as Project.Web.Models.ProjectIdentity).Firstname)
+                @((User.Identity as Project.Web.Models.ProjectIdentity).Lastname)
+            </strong>
+        </div>
+        <div class="actions">
+            [ @Html.RouteLink(@Project.Web.Properties.Resources.SignInMyQuotes, "SongByUser", new { userId = (User.Identity as Project.Web.Models.ProjectIdentity).UserId }) ]
+            @if ((User.Identity as Project.Web.Models.ProjectIdentity).Role == 1)
+            {
+                <!––noindex––><text>
+                    [ @Html.RouteLink(@Project.Web.Properties.Resources.SignInAdminArea, "AdminSongIndex", new { }, new { rel = "nofollow" }) ]
+                </text><!––/noindex––>
+            }
+            [ @Html.RouteLink(@Project.Web.Properties.Resources.SignInLogout, "AuthSignOut") ]
+        </div>
+    }
+    else
+    {
+        if (ViewContext.RouteData.Values["action"] != "SignIn")
+        {
+		    <h2>@Project.Web.Properties.Resources.SignInLoginWith</h2>
+	        <div class="logos">
+                <div class="logo">
+                    <a href="@Url.RouteUrl("VkontakteIndex")">
+                        <img src="@Url.Content("~/Content/images/vk_logo_small.jpg")" alt="@Project.Web.Properties.Resources.SignInVkontakte" />
+                    </a>
+                    <span class="name">@Project.Web.Properties.Resources.SignInVkontakte</span>
+                </div>
+                <div class="separator">@Project.Web.Properties.Resources.SignInOr</div>
+                <div class="logo">
+                    <a href="@Url.RouteUrl("FacebookIndex")">
+                        <img src="@Url.Content("~/Content/images/fb_logo_small.jpg")" alt="Facebook" />
+                    </a>
+                    <span class="name">Facebook</span>
+                </div>
+            </div>
+        }
+        else
+        {
+            <h2>@Project.Web.Properties.Resources.SignInInformation</h2>
+            <div class="info">
+                @Project.Web.Properties.Resources.SignInInformationContent
+            </div>
+        }
+    }
+</div>

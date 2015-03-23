@@ -1,0 +1,17 @@
+﻿@model Project.Models.Song
+
+@{
+    ViewBag.Title = "Добавить цитату";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    
+    @Html.Partial("_SongForm", Model)
+
+}
+
+<div>
+    @Html.RouteLink("Список цитат", "AdminSongIndex")
+</div>

@@ -1,0 +1,12 @@
+﻿@model Project.Models.Ticket
+
+@if ((bool) ViewBag.IsAjaxRequest)
+{
+    Layout = null;
+}
+else
+{
+    ViewBag.Title = Model.PlaceDescription;
+}
+
+@Html.Partial("_TicketDetails", Model)

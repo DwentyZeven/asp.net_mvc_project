@@ -1,0 +1,94 @@
+﻿@model Project.Web.Extensions.Pagination.IPagedList<Project.Models.User>
+@using Project.Web.Extensions.Pagination
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Facebook ID</th>
+        <th>ВКонтакте ID</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Ник</th>
+        <th>Пол</th>
+        <th>E-Mail</th>
+        <th>Роль</th>
+        <th>Предупреждён</th>
+        <th>Заблокирован</th>
+        <th>Online</th>
+        <th>Время добавления</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr id="@string.Format("user{0}", user.UserId)">
+            <td>
+                @user.UserId
+            </td>
+            <td>
+                @user.FacebookId
+            </td>
+            <td>
+                @user.VkontakteId
+            </td>
+            <td>
+                @user.Firstname
+            </td>
+            <td>
+                @user.Lastname
+            </td>
+            <td>
+                @user.Username
+            </td>
+            <td>
+                @(user.Gender == 1 ? "женский" : (user.Gender == 2 ? "мужской" : "неизвестно"))
+            </td>
+            <td>
+                @user.Email
+            </td>
+            <td>
+                @(user.Role == 1 ? "администратор" : (user.Role == 2 ? "пользователь" : "неизвестно"))
+            </td>
+            <td>
+                @(user.IsWarned ? "да" : "нет")
+            </td>
+            <td>
+                @(user.IsBanned ? "да" : "нет")
+            </td>
+            <td>
+                @(user.IsOnline ? "да" : "нет")
+            </td>
+            <td>
+                @TimeZone.CurrentTimeZone.ToLocalTime(user.CreatedOn)
+            </td>
+            <td>
+                <!––noindex––><a href="@user.PhotoLink" target="_blank" rel="nofollow">Фото</a><!––/noindex––>
+            </td>
+            <td>
+                <!––noindex––><a href="@user.Link" target="_blank" rel="nofollow">Профиль</a><!––/noindex––>
+            </td>
+            <td>
+                @Html.RouteLink("Цитаты", "AdminSongByUser", new { userId = @user.UserId })
+            </td>
+            <td>
+                @Html.RouteLink("Редактировать", "AdminUserEdit", new { userId = @user.UserId })
+            </td>
+            <td>
+                @if (user.UserId != (long)Project.Web.Config.MainAdminId)
+                {
+                    <a href="" onclick="deleteUser(@user.UserId); return false;">Удалить</a>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="pagination">
+    @Html.Pagination(Model.CurrentPageNumber, Model.PageSize, Model.TotalCount)
+</div>
+
+<script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/fs.user-list-delete.js")" type="text/javascript"></script>

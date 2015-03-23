@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmailValidatorRegEx" xml:space="preserve">
+    <value>^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$</value>
+  </data>
+  <data name="FutureDateValidationMessage" xml:space="preserve">
+    <value>Эта дата должна быть в будущем</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>Неправильный адрес электронной почты</value>
+  </data>
+  <data name="InvalidInputCharacter" xml:space="preserve">
+    <value>Можно вводить только буквы, цифры и символы [.,:";'_ -?!()]</value>
+  </data>
+  <data name="InvalidMultilineInput" xml:space="preserve">
+    <value>Можно вводить только буквы, цифры и символы [.,:";'_ -?!()]</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Пароль должен быть не короче 8 символов , содержать хотя бы одну строчную букву, одну заглавную и одну цифру. Кроме того разрешены символы @#$%&amp;+</value>
+  </data>
+  <data name="PasswordValidatorRegEx" xml:space="preserve">
+    <value>^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])([@#$%&amp;+]).*$</value>
+  </data>
+  <data name="PastDateValidationMessage" xml:space="preserve">
+    <value>Эта дата не может быть в будущем</value>
+  </data>
+  <data name="SongLanguageLabelText" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="SongQuoteLabelText" xml:space="preserve">
+    <value>Оригинальная цитата из песни</value>
+  </data>
+  <data name="SongQuoteRequired" xml:space="preserve">
+    <value>Необходимо ввести цитату</value>
+  </data>
+  <data name="SongQuoteStringLengthValidationError" xml:space="preserve">
+    <value>Цитата должна содержать не меньше 10, но не больше 255 символов</value>
+  </data>
+  <data name="SongSingerLabelText" xml:space="preserve">
+    <value>Имя исполнителя или название группы</value>
+  </data>
+  <data name="SongSingerRequired" xml:space="preserve">
+    <value>Необходимо указать имя исполнителя или название группы</value>
+  </data>
+  <data name="SongSingerStringLengthValidationError" xml:space="preserve">
+    <value>Имя исполнителя или название группы не должно превышать 50 символов</value>
+  </data>
+  <data name="SongTitleLabelText" xml:space="preserve">
+    <value>Название песни</value>
+  </data>
+  <data name="SongTitleRequired" xml:space="preserve">
+    <value>Необходимо указать название песни</value>
+  </data>
+  <data name="SongTitleStringLengthValidationError" xml:space="preserve">
+    <value>Название песни не должно превышать 50 символов</value>
+  </data>
+  <data name="SongTranslationLabelText" xml:space="preserve">
+    <value>Переведите на русский, если цитата не на русском (необязательно)</value>
+  </data>
+  <data name="SongTranslationStringLengthValidationError" xml:space="preserve">
+    <value>Перевод должен содержать не меньше 10, но не больше 255 символов</value>
+  </data>
+  <data name="StoreRestrictedDateValidationMessage" xml:space="preserve">
+    <value>Дата должна быть между {0:d} и {1:d}</value>
+  </data>
+  <data name="TextLineValidatorRegEx" xml:space="preserve">
+    <value>^(?!.*--)[А-Яа-яЁёA-Za-z0-9\.,:";'_ \-?!()]*$</value>
+  </data>
+  <data name="TextMultilineValidatorRegEx" xml:space="preserve">
+    <value>^(?!.*--)([А-Яа-яЁёA-Za-z0-9\.,:";'_ \-?!()]|\r|\n)*$</value>
+  </data>
+  <data name="TicketAdditionalNoteLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketAdditionalNoteStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketAgeMaxLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketAgeMaxRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketAgeMinLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketAgeMinRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketCityLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketCityStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketCountryLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketCountryStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketDayLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketDayRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketFirstnameLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketFirstnameStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketGenderLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketGenderRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketGenderRequired" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketLanguageLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketLastnameLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketLastnameStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketLookDescriptionLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketLookDescriptionRequired" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketLookDescriptionStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketMonthLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketMonthRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketPlaceDescriptionLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketPlaceDescriptionRequired" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketPlaceDescriptionStringLengthValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketSeasonLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketSeasonRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketSeasonRequired" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketYearLabelText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketYearRangeValidationError" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TicketYearRequired" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserEmailLabelText" xml:space="preserve">
+    <value>Адрес электронной почты (E-mail)</value>
+  </data>
+  <data name="UserEmailStringLengthValidationError" xml:space="preserve">
+    <value>Адрес электронной почты должен содержать не больше 50 символов</value>
+  </data>
+  <data name="UserFacebookIdLabelText" xml:space="preserve">
+    <value>Facebook ID</value>
+  </data>
+  <data name="UserFacebookIdRequired" xml:space="preserve">
+    <value>Необходимо ввести ID пользователя Facebook</value>
+  </data>
+  <data name="UserFavoriteSingersLabelText" xml:space="preserve">
+    <value>Любимые исполнители и группы</value>
+  </data>
+  <data name="UserFavoriteSingersStringLengthValidationError" xml:space="preserve">
+    <value>Поле с любимыми исполнителями и группами  не должно превышать 255 символов</value>
+  </data>
+  <data name="UserFirstnameLabelText" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="UserFirstnameRequired" xml:space="preserve">
+    <value>Необходимо ввести имя</value>
+  </data>
+  <data name="UserFirstnameStringLengthValidationError" xml:space="preserve">
+    <value>Имя не должно превышать 50 символов</value>
+  </data>
+  <data name="UserGenderLabelText" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="UserGenderRangeValidationError" xml:space="preserve">
+    <value>Значение для пола должно быть в диапазоне 0-2</value>
+  </data>
+  <data name="UserGenderRequired" xml:space="preserve">
+    <value>Пол должен быть указан</value>
+  </data>
+  <data name="UserIsBannedLabelText" xml:space="preserve">
+    <value>Заблокирован</value>
+  </data>
+  <data name="UserIsWarnedLabelText" xml:space="preserve">
+    <value>Предупреждён</value>
+  </data>
+  <data name="UserLastnameLabelText" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="UserLastnameRequired" xml:space="preserve">
+    <value>Необходимо ввести фамилию</value>
+  </data>
+  <data name="UserLastnameStringLengthValidationError" xml:space="preserve">
+    <value>Фамилия не должна превышать 50 символов</value>
+  </data>
+  <data name="UserLinkLabelText" xml:space="preserve">
+    <value>Ссылка на профиль</value>
+  </data>
+  <data name="UserLinkRequired" xml:space="preserve">
+    <value>Необходимо указать ссылку на профиль</value>
+  </data>
+  <data name="UserLinkStringLengthValidationError" xml:space="preserve">
+    <value>Ссылка на профиль не должна превышать 255 символов</value>
+  </data>
+  <data name="UserPasswordLabelText" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="UserPasswordStringLengthValidationError" xml:space="preserve">
+    <value>Пароль не должен превышать 50 символов</value>
+  </data>
+  <data name="UserPhotoLinkLabelText" xml:space="preserve">
+    <value>Ссылка на фотографию профиля</value>
+  </data>
+  <data name="UserPhotoLinkStringLengthValidationError" xml:space="preserve">
+    <value>Ссылка на фотографию не должна превышать 255 символов</value>
+  </data>
+  <data name="UserRoleLabelText" xml:space="preserve">
+    <value>Роль</value>
+  </data>
+  <data name="UserRoleRangeValidationError" xml:space="preserve">
+    <value>Значение для роли должно быть в диапазоне 1-2</value>
+  </data>
+  <data name="UserRoleRequired" xml:space="preserve">
+    <value>Необходимо указать роль</value>
+  </data>
+  <data name="UserUsernameLabelText" xml:space="preserve">
+    <value>Ник</value>
+  </data>
+  <data name="UserUsernameStringLengthValidationError" xml:space="preserve">
+    <value>Ник не должен превышать 50 символов</value>
+  </data>
+  <data name="UserVkontakteIdLabelText" xml:space="preserve">
+    <value>ВКонтакте ID</value>
+  </data>
+  <data name="UserVkontakteIdRequired" xml:space="preserve">
+    <value>Необходимо ввести ID пользователя ВКонтакте</value>
+  </data>
+</root>

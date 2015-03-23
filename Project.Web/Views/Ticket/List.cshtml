@@ -1,0 +1,12 @@
+﻿@model System.Collections.ObjectModel.ReadOnlyCollection<Project.Models.Ticket>
+
+@if ((bool) ViewBag.IsAjaxRequest) 
+{
+    Layout = null;
+}
+else
+{
+    ViewBag.Title = Project.Web.Properties.Resources.TicketListTitle;
+}
+
+@Html.Partial("_TicketList", Model)

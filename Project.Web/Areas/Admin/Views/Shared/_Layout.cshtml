@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="robots" content="none" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>@Project.Web.Config.ProjectName | @ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Admin.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <h1>@Project.Web.Config.ProjectName - Административная часть</h1>
+            </div>
+            <div id="logindisplay">
+                @Html.Partial("_SignIn")
+            </div>
+            <div id="menucontainer">
+                <ul id="menu">
+                    <li @if (ViewContext.RouteData.Values["action"] == "Index")
+                        { <text>class="selected"</text> } >
+                        @Html.RouteLink("Цитаты от Fromsong", "AdminSongIndex")
+                    </li>
+                    <li @if (ViewContext.RouteData.Values["controller"] == "Song" && ViewContext.RouteData.Values["action"] == "List")
+                        { <text>class="selected"</text> } >
+                        @Html.RouteLink("Цитаты пользователей", "AdminSongList")
+                    </li>
+                    <li @if (ViewContext.RouteData.Values["action"] == "Add")
+                        { <text>class="selected"</text> } >
+                        @Html.RouteLink("Добавить цитату", "AdminSongAdd")
+                    </li>
+                    <li @if (ViewContext.RouteData.Values["controller"] == "User" && ViewContext.RouteData.Values["action"] == "List")
+                        { <text>class="selected"</text> } >
+                        @Html.RouteLink("Пользователи", "AdminUserList")
+                    </li>
+                    <li @if (ViewContext.RouteData.Values["action"] == "ByDeletedUsers")
+                        { <text>class="selected"</text> } >
+                        @Html.RouteLink("Цитаты удалённых пользователей", "AdminSongByDeletedUsers")
+                    </li>
+                    <li>
+                        @Html.RouteLink("Лог ошибок", "AdminElmahIndex")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="message">
+                @TempData["message"]
+            </div>
+            @RenderBody()
+        </div>
+        <div id="footer">
+        </div>
+    </div>
+</body>
+</html>

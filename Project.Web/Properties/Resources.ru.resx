@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddQuoteFormAddQuote" xml:space="preserve">
+    <value>Добавить цитату</value>
+  </data>
+  <data name="AddQuoteFormNewQuote" xml:space="preserve">
+    <value>Новая цитата</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>d MMMM в H:mm</value>
+  </data>
+  <data name="Error404" xml:space="preserve">
+    <value>Оказывается, такой страницы не существует, это потеря потерь!</value>
+  </data>
+  <data name="Error500" xml:space="preserve">
+    <value>Какая-то внутренняя ошибка сервера, не беспокойтесь, примем меры!</value>
+  </data>
+  <data name="ErrorIndex" xml:space="preserve">
+    <value>Странная ошибка, но мы разберёмся, не принимайте близко к сердцу!</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Опаньки, случилось непредвиденное :(</value>
+  </data>
+  <data name="FromSongProject" xml:space="preserve">
+    <value>Fromsong - Давайте слушать музыку!</value>
+  </data>
+  <data name="JQuerySource" xml:space="preserve">
+    <value>http://yandex.st/jquery/1.5.1/jquery.min.js</value>
+  </data>
+  <data name="LayoutAddTicket" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="LayoutByAllUsers" xml:space="preserve">
+    <value>тот всегда найдёт</value>
+  </data>
+  <data name="LayoutItsVeryEasy" xml:space="preserve">
+    <value>новое объявление</value>
+  </data>
+  <data name="LayoutLanguage" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="LayoutTickets" xml:space="preserve">
+    <value>Кто ищет</value>
+  </data>
+  <data name="LayoutUp" xml:space="preserve">
+    <value>Вверх</value>
+  </data>
+  <data name="ShareBlockTitle" xml:space="preserve">
+    <value>Рассказать друзьям</value>
+  </data>
+  <data name="SignInAdminArea" xml:space="preserve">
+    <value>Админка</value>
+  </data>
+  <data name="SignInInformation" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="SignInInformationContent" xml:space="preserve">
+    <value>Чтобы добавлять цитаты, необходимо войти на сайт.</value>
+  </data>
+  <data name="SignInLoginWith" xml:space="preserve">
+    <value>Войти через</value>
+  </data>
+  <data name="SignInLogout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="SignInMyQuotes" xml:space="preserve">
+    <value>Мои цитаты</value>
+  </data>
+  <data name="SignInOr" xml:space="preserve">
+    <value>или</value>
+  </data>
+  <data name="SignInTitle" xml:space="preserve">
+    <value>Войдите, используя свой профиль</value>
+  </data>
+  <data name="SignInVkontakte" xml:space="preserve">
+    <value>ВКонтакте</value>
+  </data>
+  <data name="SongAddTitle" xml:space="preserve">
+    <value>Новая цитата</value>
+  </data>
+  <data name="SongByCurrentUserEmptyDescription" xml:space="preserve">
+    <value>Давайте сделаем это сейчас!</value>
+  </data>
+  <data name="SongByCurrentUserEmptySubject" xml:space="preserve">
+    <value>Вы пока не добавили ни одной цитаты</value>
+  </data>
+  <data name="SongByUserEmptyDescription" xml:space="preserve">
+    <value>Но мы в него верим!</value>
+  </data>
+  <data name="SongByUserEmptySubject" xml:space="preserve">
+    <value>Пока этот пользователь не добавлял цитаты</value>
+  </data>
+  <data name="SongByUserTitle" xml:space="preserve">
+    <value>Цитаты пользователя</value>
+  </data>
+  <data name="SongIndexEmptyDescription" xml:space="preserve">
+    <value>Но обязательно скоро будут!</value>
+  </data>
+  <data name="SongIndexEmptySubject" xml:space="preserve">
+    <value>Пока от проекта Fromsong нет цитат</value>
+  </data>
+  <data name="SongIndexTitle" xml:space="preserve">
+    <value>Цитаты от проекта Fromsong</value>
+  </data>
+  <data name="SongListEmptyDescription" xml:space="preserve">
+    <value>Вы можете стать первым :)</value>
+  </data>
+  <data name="SongListEmptySubject" xml:space="preserve">
+    <value>Пока никто из посетителей не добавлял цитаты</value>
+  </data>
+  <data name="SongListTitle" xml:space="preserve">
+    <value>Цитаты от всех пользователей</value>
+  </data>
+  <data name="SongMyQuotes" xml:space="preserve">
+    <value>Мои цитаты</value>
+  </data>
+  <data name="SongTranslation" xml:space="preserve">
+    <value>Перевод</value>
+  </data>
+  <data name="SongUserQuotes" xml:space="preserve">
+    <value>Цитаты пользователя</value>
+  </data>
+  <data name="TheEnd" xml:space="preserve">
+    <value>Конец</value>
+  </data>
+  <data name="TicketByCurrentUserEmptyDescription" xml:space="preserve">
+    <value>Давайте найдём кого-нибудь!</value>
+  </data>
+  <data name="TicketByCurrentUserEmptySubject" xml:space="preserve">
+    <value>Вы пока никого не искали</value>
+  </data>
+  <data name="TicketByUserEmptyDescription" xml:space="preserve">
+    <value>Но мы в него верим!</value>
+  </data>
+  <data name="TicketByUserEmptySubject" xml:space="preserve">
+    <value>Пока этот пользователь никого не искал</value>
+  </data>
+  <data name="TicketByUserTitle" xml:space="preserve">
+    <value>Поиски пользователя</value>
+  </data>
+  <data name="TicketListEmptyDescription" xml:space="preserve">
+    <value>Вы можете стать первым :)</value>
+  </data>
+  <data name="TicketListEmptySubject" xml:space="preserve">
+    <value>Пока никто из посетителей никого не искал</value>
+  </data>
+  <data name="TicketListTitle" xml:space="preserve">
+    <value>Поиски всех пользователей</value>
+  </data>
+  <data name="TicketMyTickets" xml:space="preserve">
+    <value>Мои объявления</value>
+  </data>
+  <data name="TicketUserTickets" xml:space="preserve">
+    <value>Объявления пользователя</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>в H:mm</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Сегодня</value>
+  </data>
+  <data name="Yesterday" xml:space="preserve">
+    <value>Вчера</value>
+  </data>
+</root>

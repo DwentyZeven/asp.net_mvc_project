@@ -1,0 +1,18 @@
+﻿@model Project.Models.User
+
+@{
+    ViewBag.Title = "Редактировать пользователя";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+
+    @Html.HiddenFor(model => model.UserId)
+    @Html.Hidden("Referrer", ViewData["Referrer"] as string)
+    @Html.Partial("_UserForm", Model)
+}
+
+<div>
+    <a href="@(ViewData["Referrer"] as string)">Назад</a>
+</div>

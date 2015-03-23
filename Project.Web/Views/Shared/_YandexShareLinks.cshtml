@@ -1,0 +1,25 @@
+﻿@model Project.Models.Song
+
+<script type="text/javascript">
+    var cultureCode = '@System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName';
+
+    new Ya.share({
+        element: 'ya_share' + '@Model.SongId',
+        l10n: cultureCode,
+        link: 'http://fromsong.ru/quote/' + '@Model.SongId',
+        title: '@Model.Singer' + ' - ' + '@Model.Title',
+        description: '@Model.Quote',
+        elementStyle: {
+            'type': 'icon',
+            'quickServices': ['']
+        },
+        popupStyle: {
+            blocks: {
+                '@Project.Web.Properties.Resources.ShareBlockTitle': (cultureCode == 'ru') ?
+                                                                     ['vkontakte', 'odnoklassniki', 'facebook', 'twitter'] :
+                                                                     ['facebook', 'twitter']
+            },
+            vDirection: 'down'
+        }
+    });
+</script>
